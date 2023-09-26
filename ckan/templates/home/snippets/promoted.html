@@ -3,17 +3,21 @@
 <div class="module-promotion card box">
   <div>
     {% if intro %}
-      {{ h.render_markdown(intro) }}
+    {{ h.render_markdown(intro) }}
+    <a class="btn btn-primary" href="./organization/pages/nccr-antiresist">View project pages</a>
+    <a class="btn btn-primary" href="./blog">Go to the blog</a>
     {% else %}
-      <h1 class="page-heading">{{ _("Welcome to CKAN") }}</h1>
-      <p>
-        {% trans %}This is a nice introductory paragraph about CKAN or the site
-        in general. We don't have any copy to go here yet but soon we will
-        {% endtrans %}
-      </p>
+    <h1 class="page-heading">{{ _("Welcome to CKAN") }}</h1>
+    <p>
+      {% trans %}This is a nice introductory paragraph about CKAN or the site
+      in general. We don't have any copy to go here yet but soon we will
+      {% endtrans %}
+    </p>
     {% endif %}
   </div>
 
+  <!-- Edit ackfla00: Hide home image caption -->
+  <!--
   {% block home_image %}
     <section class="featured media-overlay hidden-xs">
       <h2 class="media-heading">{% block home_image_caption %}{{ _("This is a featured section") }}{% endblock %}</h2>
@@ -24,4 +28,5 @@
       {% endblock %}
     </section>
   {% endblock %}
+-->
 </div>
